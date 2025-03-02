@@ -1,49 +1,75 @@
+/* 네비게이션 바 (BEIPINK 로고만 중앙 정렬) */
 .fixed-nav {
-    position: fixed; /* 화면 최상단 고정 */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* 네비게이션 높이 */
-    background-color: transparent !important; /* 배경 완전 투명 */
-    backdrop-filter: none !important; /* 블러 효과 제거 */
+    height: 80px;
+    background-color: transparent; /* 배경 투명 */
     display: flex;
-    justify-content: center; /* 중앙 정렬 */
+    justify-content: center;
     align-items: center;
+    font-size: 24px;
+    font-weight: bold;
     z-index: 1000;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%; /* 내부 요소 너비 조절 */
-    max-width: 1200px;
-}
-
 .nav-logo {
-    font-size: 24px;
-    font-weight: bold;
+    color: white;
 }
 
-.nav-logo a {
-    text-decoration: none;
-    color: white !important; /* 글자 색상 - 배경과 대비되도록 */
+/* 좌측 메뉴 버튼 */
+.menu-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
-.nav-links {
-    display: flex;
+/* 사이드 메뉴 (기본적으로 숨김) */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* 기본적으로 화면 밖 */
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* 반투명 검은색 */
+    backdrop-filter: blur(10px); /* 블러 효과 */
+    transition: 0.3s;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+}
+
+.side-menu ul {
     list-style: none;
-    gap: 20px;
+    padding: 0;
+    margin: 50px 0;
 }
 
-.nav-links li a {
+.side-menu ul li {
+    padding: 15px 20px;
+}
+
+.side-menu ul li a {
     text-decoration: none;
-    color: white !important; /* 메뉴 글자 색상 - 배경과 대비되도록 */
+    color: white;
     font-size: 18px;
     transition: 0.3s;
 }
 
-.nav-links li a:hover {
-    color: red !important; /* 마우스 오버 시 강조 */
+.side-menu ul li a:hover {
+    color: red;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
