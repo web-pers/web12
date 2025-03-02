@@ -21,29 +21,34 @@
     position: relative;
 }
 
-.nav-logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-/* 메뉴 버튼 (햄버거 아이콘) */
+/* 햄버거 메뉴 버튼 스타일 */
 .menu-icon {
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
     color: white;
     position: absolute;
     right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-/* 사이드 메뉴 (숨겨진 상태) */
+.menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 사이드 메뉴 (기본적으로 숨김) */
 .side-menu {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -320px; /* 기본적으로 화면 밖 */
     width: 320px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    height: 100vh; /* 전체 높이 확장 */
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     transition: left 0.4s ease-in-out;
     padding: 30px;
@@ -60,7 +65,7 @@
 
 /* 메뉴 닫기 버튼 */
 .close-btn {
-    font-size: 30px;
+    font-size: 32px;
     color: white;
     cursor: pointer;
     align-self: flex-end;
@@ -75,13 +80,14 @@
 }
 
 .menu-content ul li {
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .menu-content ul li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
