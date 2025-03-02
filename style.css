@@ -7,28 +7,38 @@
     height: 80px;
     background-color: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* 로고를 중앙 정렬 */
     align-items: center;
     z-index: 1000;
 }
 
+/* 네비게이션 내부 컨테이너 */
 .nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 90%;
     max-width: 1200px;
     position: relative;
 }
 
-/* 햄버거 메뉴 버튼 스타일 */
+/* 로고 스타일 */
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* 정확한 중앙 정렬 */
+}
+
+/* 햄버거 메뉴 버튼 (좌측으로 이동) */
 .menu-icon {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     color: white;
     position: absolute;
-    right: 20px;
+    left: 20px; /* 왼쪽으로 이동 */
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.2);
@@ -41,13 +51,13 @@
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* 사이드 메뉴 (기본적으로 숨김) */
+/* 사이드 메뉴 (좌측에서 등장) */
 .side-menu {
     position: fixed;
     top: 0;
     left: -320px; /* 기본적으로 화면 밖 */
     width: 320px;
-    height: 100vh; /* 전체 높이 확장 */
+    height: 100vh; /* 전체 화면 높이로 확장 */
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     transition: left 0.4s ease-in-out;
