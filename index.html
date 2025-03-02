@@ -8,9 +8,24 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <iframe src="navbar.html" width="100%" height="80px" style="border:none;"></iframe>
 
-    <main>
-    </main>
+    <!-- 네비게이션 바 -->
+    <nav class="fixed-nav">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- 메뉴 버튼 -->
+        <div class="nav-logo">BEIPINK</div>
+    </nav>
+
+    <!-- 좌측 슬라이드 메뉴 -->
+    <div id="side-menu" class="side-menu">
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+        <ul>
+            <li><a href="#brand">BRAND</a></li>
+            <li><a href="#collection">COLLECTION</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#membership">MEMBERSHIP</a></li>
+            <li><a href="#community">COMMUNITY</a></li>
+        </ul>
+    </div>
+
 </body>
 </html>
